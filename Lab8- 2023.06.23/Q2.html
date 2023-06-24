@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Grade Calculation</title>
+<script>
+window.onload=function()
+{
+x();
+}
+function x() 
+{
+var marks = [];
+var total = 0;
+for (var i = 0; i < 5; i++) 
+{
+var mark = parseInt(prompt("Enter mark " + (i + 1)));
+marks.push(mark);
+total += mark;
+}
+var average = total / 5;
+document.write("Total: ",total);
+document.write("<br>");
+document.write("Average: ",total/5);
+document.write("<br>");
+var button=document.createElement("button");
+button.innerHTML="Grade";
+button.onclick=function()
+{
+if (average > 30) 
+{
+alert("Congrats! You passed");
+} 
+else 
+{
+alert("Better luck next time");
+}
+}
+document.body.appendChild(button);
+}
+</script>
+</head>
+<body>
+<button onclick="x()">Grade</button>
+</body>
+</html>
