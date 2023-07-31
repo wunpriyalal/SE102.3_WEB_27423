@@ -1,0 +1,25 @@
+<html>
+<body>
+
+  <video id="video" width="320" height="240" controls>
+    <source src="path_to_video.mp4" type="video/mp4">
+  </video>
+
+  <script>
+    const video = document.getElementById('video');
+
+    function playVideo() {
+      video.autoplay = true;
+      video.play();
+    }
+
+    function pauseVideo() {
+      video.autoplay = false;
+      video.pause();
+    }
+
+    video.addEventListener('mouseover', playVideo);
+    video.addEventListener('mouseout', pauseVideo);
+  </script>
+</body>
+</html>
